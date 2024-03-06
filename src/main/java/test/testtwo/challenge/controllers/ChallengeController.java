@@ -24,7 +24,8 @@ public class ChallengeController extends AbstractRestController {
     }
 
 
-    @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.TEXT_XML_VALUE},
+            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.TEXT_XML_VALUE})
     public ResponseEntity<ResponseDTO> maximumRequestPost(@Valid @RequestBody ChallengeDTO challengeDTO) {
 
         ResponseDTO responseDTO = buildSuccessResponseDTO(challengeService.calculateMaximum(challengeDTO));
