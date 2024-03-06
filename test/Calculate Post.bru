@@ -1,0 +1,19 @@
+meta {
+  name: Calculate Post
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8070/v1/challenge
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "x": 5,
+    "y": 0,
+    "n": 4
+  }
+}
